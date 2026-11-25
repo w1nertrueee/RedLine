@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090a0e" />
+    <meta name="description" content="Подписки REDLINE — выбери уровень доступа к своему игровому HUD." />
+    <title>Подписки — REDLINE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Основная навигация">
+        <a class="brand" href="#home" aria-label="REDLINE — главная">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span class="brand-name">REDLINE<span class="brand-dot">.</span><small>MEMBERSHIP</small></span>
+        </a>
+        <div class="side-caption">НАВИГАЦИЯ</div>
+        <nav class="side-nav">
+          <a class="nav-link active" href="#home"><span class="nav-icon">◈</span> Обзор</a>
+          <a class="nav-link" href="#plans"><span class="nav-icon">▤</span> Тарифы <span class="nav-pip"></span></a>
+          <a class="nav-link" href="#compare"><span class="nav-icon">⌗</span> Возможности</a>
+          <a class="nav-link" href="#faq"><span class="nav-icon">?</span> Помощь</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="status-card">
+            <div class="status-head"><span class="status-light"></span> СИСТЕМА АКТИВНА</div>
+            <div class="status-copy">Твой следующий уровень<br />уже на стартовой.</div>
+            <div class="status-track"><span></span></div>
+            <div class="status-meta"><span>REDLINE CORE</span><span>v1.0</span></div>
+          </div>
+          <a class="help-link" href="#faq"><span>◉</span> Центр поддержки</a>
+          <div class="side-foot">© 2026 REDLINE LABS<br /><span>НЕЗАВИСИМЫЙ ПРОЕКТ</span></div>
+        </div>
+      </aside>
+
+      <main id="home" class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>КОНСОЛЬ</span><i>/</i><b>ПОДПИСКА</b></div>
+          <div class="top-actions">
+            <span class="secure-label"><span></span> ЗАЩИЩЁННОЕ СОЕДИНЕНИЕ</span>
+            <button class="profile-button" id="profileButton" aria-label="Профиль пользователя"><span class="profile-avatar">R</span><span class="profile-name">Гость</span><span class="profile-chevron">⌄</span></button>
+          </div>
+        </header>
+
+        <section class="hero-section reveal">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> ДОСТУП К REDLINE</div>
+            <h1>ИГРАЙ<br /><span>НА СВОИХ</span><br />УСЛОВИЯХ<span class="title-period">.</span></h1>
+            <p>Выбери свой уровень. Открой больше контроля, персонализации и инструментов для игры.</p>
+            <a class="primary-button hero-cta" href="#plans">Выбрать тариф <span class="button-arrow">↘</span></a>
+            <div class="hero-footnote"><span class="pulse-dot"></span> ПОДПИСКА ОФОРМЛЯЕТСЯ НА 1 МЕСЯЦ</div>
+          </div>
+          <div class="hero-visual" aria-label="Абстрактная визуализация игрового интерфейса">
+            <div class="visual-grid"></div>
+            <div class="visual-ring ring-outer"></div><div class="visual-ring ring-mid"></div><div class="visual-ring ring-inner"></div>
+            <div class="ring-cross cross-top"></div><div class="ring-cross cross-bottom"></div>
+            <div class="core-emblem"><span>R</span><i></i></div>
+            <div class="hud-label hud-top"><span>SYS / 01</span><b>READY</b></div>
+            <div class="hud-label hud-left"><small>PERFORMANCE</small><strong>+<span data-count="24">0</span>%</strong></div>
+            <div class="hud-label hud-right"><small>CONTROL</small><strong>MAX</strong></div>
+            <div class="hud-label hud-bottom"><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>REDLINE CORE — ONLINE</span></div>
+            <div class="visual-coordinate">51°30'26.4"N<br />00°07'39.0"W</div>
+          </div>
+          <div class="hero-index"><span>01</span><i></i><span>04</span></div>
+        </section>
+
+        <section id="plans" class="plans-section reveal">
+          <div class="section-heading">
+            <div><div class="eyebrow"><span class="eyebrow-line"></span> НАЙДИ СВОЙ ТЕМП</div><h2>ВЫБЕРИ <span>ТАРИФ</span></h2></div>
+            <div class="billing-note"><span class="billing-dot"></span> Все цены указаны за 1 месяц</div>
+          </div>
+          <div class="plan-grid" id="planGrid">
+            <article class="plan-card" data-plan="lite" tabindex="0" aria-label="Тариф Lite, 60 рублей в месяц">
+              <div class="plan-top"><span class="plan-code">RL / 01</span><span class="plan-symbol lite-symbol">L</span></div>
+              <div class="plan-title-row"><h3>LITE</h3><span class="plan-tag">СТАРТ</span></div>
+              <p class="plan-description">Всё необходимое, чтобы войти в систему.</p>
+              <div class="price-row"><strong>60<span>₽</span></strong><small>/ месяц</small></div>
+              <div class="plan-divider"></div>
+              <ul class="feature-list"><li><span>+</span> Базовый доступ к REDLINE</li><li><span>+</span> Стандартные настройки HUD</li><li><span>+</span> Основные игровые модули</li><li class="muted-feature"><span>—</span> Расширенная персонализация</li></ul>
+              <button class="plan-button" data-select="lite">Выбрать Lite <span>↗</span></button>
+              <div class="plan-card-glow"></div>
+            </article>
+            <article class="plan-card featured" data-plan="standard" tabindex="0" aria-label="Тариф Standard, 100 рублей в месяц">
+              <div class="featured-ribbon"><span>ВЫБОР СООБЩЕСТВА</span></div>
+              <div class="plan-top"><span class="plan-code">RL / 02</span><span class="plan-symbol standard-symbol">S</span></div>
+              <div class="plan-title-row"><h3>STANDARD</h3><span class="plan-tag">БАЛАНС</span></div>
+              <p class="plan-description">Больше гибкости для уверенной игры.</p>
+              <div class="price-row"><strong>100<span>₽</span></strong><small>/ месяц</small></div>
+              <div class="plan-divider"></div>
+              <ul class="feature-list"><li><span>+</span> Всё из тарифа Lite</li><li><span>+</span> Расширенные настройки HUD</li><li><span>+</span> Дополнительные визуальные модули</li><li><span>+</span> Сохранение нескольких профилей</li></ul>
+              <button class="plan-button selected-button" data-select="standard">Выбрать Standard <span>↗</span></button>
+              <div class="plan-card-glow"></div>
+            </article>
+            <article class="plan-card" data-plan="pro" tabindex="0" aria-label="Тариф Pro, 200 рублей в месяц">
+              <div class="plan-top"><span class="plan-code">RL / 03</span><span class="plan-symbol pro-symbol">P</span></div>
+              <div class="plan-title-row"><h3>PRO</h3><span class="plan-tag">ПОЛНЫЙ КОНТРОЛЬ</span></div>
+              <p class="plan-description">Максимум инструментов. Без компромиссов.</p>
+              <div class="price-row"><strong>200<span>₽</span></strong><small>/ месяц</small></div>
+              <div class="plan-divider"></div>
+              <ul class="feature-list"><li><span>+</span> Всё из тарифа Standard</li><li><span>+</span> Полный набор визуальных модулей</li><li><span>+</span> Приоритет раннего доступа</li><li><span>+</span> Максимальная персонализация</li></ul>
+              <button class="plan-button" data-select="pro">Выбрать Pro <span>↗</span></button>
+              <div class="plan-card-glow"></div>
+            </article>
+          </div>
+          <div class="plans-assurance"><span class="assurance-shield">◇</span><span>Без долгих обязательств</span><i></i><span>Можно отменить в любое время</span><i></i><span>Один платёж — один месяц доступа</span></div>
+        </section>
+
+        <section id="compare" class="compare-section reveal">
+          <div class="section-heading compact-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> БЕЗ СКРЫТЫХ УСЛОВИЙ</div><h2>СРАВНИ <span>ВОЗМОЖНОСТИ</span></h2></div><span class="compare-caption">ТВОЙ ВЫБОР — ТВОИ ПРАВИЛА</span></div>
+          <div class="compare-table-wrap"><table class="compare-table"><thead><tr><th>Возможность</th><th>Lite</th><th class="col-featured">Standard</th><th>Pro</th></tr></thead><tbody>
+            <tr><td>Базовые функции REDLINE</td><td><b>●</b></td><td class="col-featured"><b>●</b></td><td><b>●</b></td></tr>
+            <tr><td>Персонализация HUD</td><td><span class="limited">Базовая</span></td><td class="col-featured"><b>●</b></td><td><b>●</b></td></tr>
+            <tr><td>Игровые модули</td><td><span class="limited">Основные</span></td><td class="col-featured"><span class="limited">Расширенные</span></td><td><b>●</b></td></tr>
+            <tr><td>Сохранённые профили</td><td>1</td><td class="col-featured">Несколько</td><td>Несколько</td></tr>
+            <tr><td>Ранний доступ к функциям</td><td><span class="dash">—</span></td><td class="col-featured"><span class="dash">—</span></td><td><b>●</b></td></tr>
+            <tr class="table-price"><td>Стоимость в месяц</td><td>60 ₽</td><td class="col-featured">100 ₽</td><td>200 ₽</td></tr>
+          </tbody></table></div>
+          <p class="feature-disclaimer">Перечень функций — демонстрационный макет. Фактический состав тарифов будет зависеть от готовых возможностей REDLINE.</p>
+        </section>
+
+        <section class="signal-banner reveal"><div class="signal-mark"><span></span><span></span><span></span></div><div><div class="signal-overline">READY WHEN YOU ARE</div><h2>ТВОЯ ИГРА.<br /><span>ТВОЙ РИТМ.</span></h2></div><button class="primary-button" data-open-checkout="standard">Начать с Standard <span class="button-arrow">↗</span></button><div class="signal-watermark">RL</div></section>
+
+        <section id="faq" class="faq-section reveal"><div class="faq-intro"><div class="eyebrow"><span class="eyebrow-line"></span> ЕСТЬ ВОПРОСЫ?</div><h2>КОРОТКО<br />О <span>ГЛАВНОМ</span></h2><p>Мы за понятные правила. Вот что важно знать перед выбором.</p></div><div class="faq-list">
+          <details><summary>Как работает подписка?<span>+</span></summary><p>Подписка открывает доступ к функциям выбранного тарифа на один месяц. В этом макете покупка демонстрационная: деньги не списываются, а доступ не активируется.</p></details>
+          <details><summary>Будет ли автоматическое продление?<span>+</span></summary><p>В текущем демо автоматического продления нет. Реальные условия продления должны быть показаны до подключения настоящей оплаты.</p></details>
+          <details><summary>Можно ли сменить тариф?<span>+</span></summary><p>Да, предполагается переход на другой тариф в следующем месяце. Правила перехода будут указаны перед запуском платёжной системы.</p></details>
+          <details><summary>Как будет проходить оплата?<span>+</span></summary><p>Платёжный сервис пока не подключён. Сейчас можно пройти только демонстрационный сценарий оформления, без ввода реквизитов карты.</p></details>
+        </div></section>
+
+        <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark"><span></span><span></span><span></span></span><span class="brand-name">REDLINE<span class="brand-dot">.</span><small>MEMBERSHIP</small></span></a><span class="footer-copy">НЕЗАВИСИМЫЙ ПРОЕКТ. НЕ СВЯЗАН С MOJANG И MICROSOFT.</span><a class="back-top" href="#home">НАВЕРХ <span>↑</span></a></footer>
+      </main>
+    </div>
+
+    <dialog class="checkout-dialog" id="checkoutDialog" aria-labelledby="checkoutTitle">
+      <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Закрыть окно">×</button></form>
+      <div class="checkout-content" id="checkoutContent">
+        <div class="checkout-kicker"><span class="status-light"></span> ДЕМО-ОФОРМЛЕНИЕ</div>
+        <h2 id="checkoutTitle">ЗАПУСК<br /><span>ПОДПИСКИ</span></h2>
+        <p class="checkout-lead">Проверь тариф перед продолжением.</p>
+        <div class="checkout-summary"><div><span>ВЫБРАННЫЙ ТАРИФ</span><strong id="checkoutPlanName">STANDARD</strong></div><strong id="checkoutPlanPrice">100 ₽<small> / месяц</small></strong></div>
+        <label class="checkout-label" for="checkoutEmail">EMAIL ДЛЯ ДЕМО-КВИТАНЦИИ</label>
+        <input class="checkout-input" id="checkoutEmail" name="email" type="email" placeholder="name@example.com" autocomplete="email" />
+        <p class="input-error" id="emailError" aria-live="polite"></p>
+        <div class="demo-notice"><span>i</span><p><b>Это тестовый режим.</b> Оплата не подключена, деньги не списываются. Не вводи данные банковской карты.</p></div>
+        <button type="button" class="primary-button checkout-submit" id="simulatePayment">Продолжить в демо <span class="button-arrow">↗</span></button>
+        <button type="button" class="checkout-cancel" id="cancelCheckout">Вернуться к тарифам</button>
+      </div>
+      <div class="checkout-success" id="checkoutSuccess" hidden>
+        <div class="success-mark">✓</div><div class="checkout-kicker">ДЕМО ЗАВЕРШЕНО</div><h2>ВСЁ<br /><span>ГОТОВО</span></h2>
+        <p class="checkout-lead">Ты увидел тестовый сценарий для тарифа <b id="successPlan">STANDARD</b>. Платёж не совершён, подписка не активирована.</p>
+        <button type="button" class="primary-button checkout-submit" id="closeSuccess">Понятно <span class="button-arrow">↗</span></button>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
